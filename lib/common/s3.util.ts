@@ -6,13 +6,17 @@ export function createS3Client(options: S3ConfigOptions): S3 {
     AWS.config.update({
         accessKeyId: options.accessKeyId,
         secretAccessKey: options.secretAccessKey,
-        sessionToken: options?.sessionToken,
-        region: options.region
+        sessionToken: options.sessionToken,
+        region: options.region,
     });
+
     let version = options.apiVersion === undefined ? '2006-03-01' : options.apiVersion;
+    
     let params: S3.ClientConfiguration = {
+        endpoint: options.endpoint,
         apiVersion: version
     };
+
     const client = new S3(params);
     return client;
 }
