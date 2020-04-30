@@ -6,6 +6,7 @@ export interface S3ConfigOptions {
     sessionToken?: string;
     apiVersion?: string;
     endpoint?: string;
+    signatureVersion?: string;
 }
 export interface S3ConfigOptionsFactory {
     createS3ConfigOptions(): Promise<S3ConfigOptions> | S3ConfigOptions;

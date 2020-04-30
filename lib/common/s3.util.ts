@@ -14,7 +14,8 @@ export function createS3Client(options: S3ConfigOptions): S3 {
     
     let params: S3.ClientConfiguration = {
         endpoint: options.endpoint,
-        apiVersion: version
+        apiVersion: version,
+        signatureVersion: options.signatureVersion ?? 'v4'
     };
 
     const client = new S3(params);
