@@ -4,16 +4,20 @@
       "name": "Dexter Hardy",
       "email": "dexter.hardy@ntegral.com",
       "url": "https://www.ntegral.com"
+    },
+    {
+      "name": "Matteias Collet",
+      "email": "matteias.collet@swisscom.com"
     }
   ],
-  "name": "@ntegral/nestjs-s3",
-  "version": "1.0.2",
+  "name": "@bitpatty/nestjs-s3",
+  "version": "1.0.3",
   "description": "Provides an injectable s3 client to provide s3 storage access from nestjs modules",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntegral/nestjs-s3"
+    "url": "git+https://github.com/bitpatty/nestjs-s3"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
